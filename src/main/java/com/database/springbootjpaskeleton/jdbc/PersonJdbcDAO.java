@@ -34,4 +34,18 @@ public class PersonJdbcDAO {
     public int deleteAll() {
         return jdbcTemplate.update("delete from person");
     }
+
+    public int insert(Person person) {
+        return jdbcTemplate.update("insert into person(id, name, location, birth_date) VALUES(?, ?, ?, ?);",
+                person.getId(), person.getName(),
+                person.getLocation(), person.getBirthDate()
+        );
+    }
+
+    public int update(Person person) {
+        return jdbcTemplate.update(
+                "update person set name = ?, location = ?, birth_date = ? where id = ?",
+                person.getName(), person.getLocation(), person.getBirthDate(), person.getId()
+        );
+    }
 }
