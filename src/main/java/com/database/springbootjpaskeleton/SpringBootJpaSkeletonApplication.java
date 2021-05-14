@@ -29,10 +29,10 @@ public class SpringBootJpaSkeletonApplication implements CommandLineRunner {
         logger.info("User id 10001 -> {}", repository.findById(10001));
         logger.info("Inserting -> {}", repository.insert(new Person("ERDEM", "ISTANBUL", new Date())));
         logger.info("Updating 10004 -> {}", repository.update(new Person(10004, "İBRAHİM ERDEM", "KADIKÖY", new Date())));
+        repository.deleteById(10003);
         /*
         logger.info("All users -> {}", repository.findAll());
         logger.info("User name SWEN -> {}", repository.findByName("GUILLERMO"));
-        logger.info("Deleting 10003 -> No of Rows Deleted - {}", repository.deleteById(10003));
         logger.info("Deleting 10003 -> No of Rows Deleted - {}", repository.deleteAll());
 
          */
