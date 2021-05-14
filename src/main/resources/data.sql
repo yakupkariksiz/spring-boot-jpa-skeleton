@@ -1,3 +1,4 @@
+/*
 create table person
 (
     id integer not null,
@@ -6,6 +7,7 @@ create table person
     birth_date timestamp,
     primary key(id)
 );
+ */
 
 INSERT INTO PERSON(ID, NAME, LOCATION, BIRTH_DATE) VALUES(10001, 'YAKUP', 'ISTANBUL', CURRENT_TIMESTAMP());
 INSERT INTO PERSON(ID, NAME, LOCATION, BIRTH_DATE) VALUES(10002, 'GUILLERMO', 'MADRID', CURRENT_TIMESTAMP());
